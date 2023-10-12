@@ -1,8 +1,9 @@
 const { models } = require("../models/definations");
 
 module.exports = {
-  getUsers: (data) => {
-    return data;
+  getUsers: async () => {
+    const result = await models.user.findAll();
+    return result;
   },
   createUsers: async (data) => {
     console.log(data);
